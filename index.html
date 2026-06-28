@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<!-- saved from url=(0058)https://digitizeyourprocess.com/ -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-XWTKVZVQHY"></script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-XWTKVZVQHY"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -13,339 +13,938 @@
 
   gtag('config', 'G-XWTKVZVQHY');
 </script>
-
-<title>Digitize Your Process</title>
-
-<meta name="description" content="Digitize offline and manual business processes into secure, scalable digital workflows with expert digitization consulting.">
-
+<title>Digitize Your Process – Digitize. Automate. Grow.</title>
+<meta content="Digitize Your Process helps businesses automate manual operations, replace spreadsheets and paper-based workflows, and build custom digital solutions that improve productivity and reduce costs." name="description"/>
+<meta content="Business Process Automation, Digital Transformation, Workflow Automation, Process Digitization, Excel to Web Application, Custom Software Development" name="keywords"/>
+<meta content="Digitize Your Process" property="og:title"/>
+<meta content="Transform manual business processes into intelligent digital workflows." property="og:description"/>
+<meta content="website" property="og:type"/>
+<meta content="https://digitizeyourprocess.com/Digitizeyourprocess-logo-short.png" property="og:image"/>
+<link href="https://digitizeyourprocess.com" rel="canonical"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
 <style>
-:root {
-  --blue-dark: #0B2C5D;
-  --blue-mid: #123E7A;
-  --green-main: #1E9C50;
-  --green-accent: #2ECC71;
-  --bg-light: #F5F7FA;
-  --text-dark: #1A1A1A;
-  --text-muted: #555;
-}
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
+  :root {
+    --navy: #0B1D3E;
+    --blue: #1E5CF5;
+    --blue-light: #3D7BFF;
+    --blue-pale: #EBF1FF;
+    --blue-mid: #C7D9FF;
+    --teal: #00C2CB;
+    --white: #FFFFFF;
+    --gray-1: #F7F9FC;
+    --gray-2: #EEF2F8;
+    --gray-3: #CBD5E0;
+    --gray-4: #718096;
+    --gray-5: #2D3748;
+    --text: #1A202C;
+    --radius: 12px;
+    --radius-sm: 8px;
+    --shadow: 0 4px 24px rgba(30,92,245,0.08);
+    --shadow-md: 0 8px 40px rgba(30,92,245,0.13);
+  }
 
-body {
-  font-family: Inter, Segoe UI, sans-serif;
-  color: var(--text-dark);
-  line-height: 1.6;
-  background: #fff;
-}
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); overflow-x: hidden; }
+  h1,h2,h3,h4 { font-family: 'Plus Jakarta Sans', sans-serif; }
 
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 0 20px;
-}
+  /* ── TOPBAR ── */
+  .topbar {
+    background: var(--navy);
+    color: #a0b0cc;
+    font-size: 12px;
+    padding: 7px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .topbar a { color: #a0b0cc; text-decoration: none; }
+  .topbar .right { display: flex; align-items: center; gap: 16px; }
 
-/* HEADER */
-header {
-  background: #fff;
-  border-bottom: 1px solid #e5e7eb;
-  position: sticky;
-  top: 0;
-  z-index: 10;
-}
+  /* ── NAV ── */
+  nav {
+    position: sticky; top: 0; z-index: 200;
+    background: rgba(255,255,255,0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--gray-2);
+    padding: 0 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 68px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  }
+  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo-icon { width: 38px; height: 38px; flex-shrink: 0; }
+  .logo-text { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 1.2; color: var(--navy); }
+  .logo-text span { color: var(--blue); display: block; }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a { text-decoration: none; color: var(--gray-5); font-size: 14px; font-weight: 500; transition: color .2s; }
+  .nav-links a:hover { color: var(--blue); }
 
-.header-wrap {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 14px 0;
-}
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column; gap: 5px;
+    background: none; border: none; cursor: pointer; padding: 6px;
+  }
+  .hamburger span {
+    display: block; width: 24px; height: 2px;
+    background: var(--navy); border-radius: 2px;
+    transition: all .3s;
+  }
+  .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  .hamburger.open span:nth-child(2) { opacity: 0; }
+  .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-.logo {
-  height: 48px;
-}
+  /* Mobile nav drawer */
+  .mobile-nav {
+    display: none;
+    position: fixed; top: 68px; left: 0; right: 0; z-index: 199;
+    background: white;
+    border-bottom: 1px solid var(--gray-2);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    padding: 20px 24px 28px;
+    flex-direction: column; gap: 0;
+  }
+  .mobile-nav.open { display: flex; }
+  .mobile-nav a {
+    text-decoration: none; color: var(--gray-5); font-size: 15px; font-weight: 500;
+    padding: 13px 0; border-bottom: 1px solid var(--gray-2);
+    display: block;
+  }
+  .mobile-nav a:last-child { border-bottom: none; }
+  .mobile-nav .btn-primary { margin-top: 14px; text-align: center; }
 
-nav a {
-  margin-left: 28px;
-  text-decoration: none;
-  color: var(--blue-dark);
-  font-weight: 600;
-}
+  .btn-primary {
+    background: var(--blue); color: var(--white);
+    border: none; border-radius: var(--radius-sm);
+    padding: 11px 22px; font-size: 14px; font-weight: 600;
+    cursor: pointer; text-decoration: none;
+    transition: background .2s, transform .15s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: #1748d4; transform: translateY(-1px); }
+  .btn-outline {
+    background: transparent; color: var(--navy);
+    border: 2px solid var(--navy); border-radius: var(--radius-sm);
+    padding: 10px 22px; font-size: 14px; font-weight: 600;
+    cursor: pointer; text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+  }
+  .btn-outline:hover { background: var(--navy); color: white; }
 
-nav a:hover {
-  color: var(--green-main);
-}
+  /* ── HERO ── */
+  .hero {
+    background: linear-gradient(135deg, #F0F5FF 0%, #EBF1FF 60%, #F7F9FC 100%);
+    min-height: 88vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 80px;
+    gap: 60px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; top: -120px; right: -120px;
+    width: 500px; height: 500px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(30,92,245,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--white); border: 1px solid var(--blue-mid);
+    border-radius: 999px; padding: 5px 14px;
+    font-size: 11px; font-weight: 700; letter-spacing: .12em;
+    color: var(--blue); margin-bottom: 22px; text-transform: uppercase;
+  }
+  .hero-eyebrow::before { content: '●'; font-size: 8px; color: var(--teal); }
+  .hero h1 {
+    font-size: clamp(28px, 4vw, 52px); font-weight: 800;
+    color: var(--navy); line-height: 1.15; margin-bottom: 22px;
+  }
+  .hero h1 .accent { color: var(--blue); }
+  .hero p { font-size: 16px; color: var(--gray-4); line-height: 1.75; margin-bottom: 28px; max-width: 460px; }
+  .hero-checks { display: flex; flex-wrap: wrap; gap: 14px 24px; margin-bottom: 36px; }
+  .hero-check { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 500; color: var(--gray-5); }
+  .hero-check svg { flex-shrink: 0; }
+  .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+  .hero-visual { display: flex; justify-content: center; align-items: center; }
+  .hero-visual svg { width: 100%; max-width: 480px; height: auto; }
 
-/* HERO */
-.hero {
-  background: linear-gradient(135deg, var(--blue-dark), var(--blue-mid));
-  color: #fff;
-  padding: 90px 0;
-  text-align: center;
-}
+  /* ── SECTION LAYOUT ── */
+  section { padding: 80px; }
+  .eyebrow {
+    text-align: center; font-size: 11px; font-weight: 700;
+    letter-spacing: .14em; color: var(--blue);
+    text-transform: uppercase; margin-bottom: 14px;
+  }
+  .section-title { text-align: center; font-size: clamp(24px, 3vw, 38px); font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+  .section-sub { text-align: center; font-size: 16px; color: var(--gray-4); max-width: 560px; margin: 0 auto 60px; line-height: 1.7; }
 
-.hero h1 {
-  font-size: clamp(2rem, 5vw, 3rem);
-  margin-bottom: 20px;
-}
+  /* ── SERVICES ── */
+  .services { background: var(--white); }
+  .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .service-card {
+    border: 1px solid var(--gray-2); border-radius: var(--radius);
+    padding: 30px 28px; background: var(--white);
+    transition: box-shadow .25s, transform .2s, border-color .2s;
+  }
+  .service-card:hover { box-shadow: var(--shadow-md); transform: translateY(-4px); border-color: var(--blue-mid); }
+  .service-icon { width: 44px; height: 44px; margin-bottom: 18px; }
+  .service-card h3 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+  .service-card p { font-size: 14px; color: var(--gray-4); line-height: 1.7; margin-bottom: 18px; }
+  .learn-more { font-size: 13px; font-weight: 600; color: var(--blue); text-decoration: none; display: inline-flex; align-items: center; gap: 5px; transition: gap .2s; }
+  .learn-more:hover { gap: 9px; }
 
-.hero p {
-  max-width: 800px;
-  margin: auto;
-  font-size: 1.2rem;
-  opacity: 0.95;
-}
+  /* ── INDUSTRIES ── */
+  .industries { background: var(--gray-1); }
+  .industries-grid { display: flex; justify-content: center; flex-wrap: wrap; gap: 16px; }
+  .industry-item {
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    padding: 22px 28px; background: var(--white);
+    border: 1px solid var(--gray-2); border-radius: var(--radius);
+    min-width: 120px; transition: box-shadow .2s, border-color .2s; cursor: default;
+  }
+  .industry-item:hover { box-shadow: var(--shadow); border-color: var(--blue-mid); }
+  .industry-item span { font-size: 13px; font-weight: 600; color: var(--gray-5); text-align: center; }
 
-.hero-actions {
-  margin-top: 40px;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+  /* ── PROCESS ── */
+  .process { background: var(--white); }
+  .process-steps { display: flex; align-items: flex-start; justify-content: center; gap: 0; flex-wrap: wrap; }
+  .process-step {
+    display: flex; flex-direction: column; align-items: center;
+    text-align: center; flex: 1; min-width: 140px; padding: 0 10px;
+  }
+  .step-num-wrap { position: relative; margin-bottom: 18px; }
+  .step-circle {
+    width: 54px; height: 54px; border-radius: 50%;
+    background: var(--blue); color: white;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 800; font-size: 14px;
+  }
+  .step-icon-top {
+    position: absolute; top: -18px; right: -18px;
+    width: 32px; height: 32px; background: var(--blue-pale);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  }
+  .process-arrow { flex-shrink: 0; align-self: flex-start; margin-top: 27px; color: var(--blue-mid); font-size: 22px; line-height: 1; }
+  .process-step h3 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+  .process-step p { font-size: 13px; color: var(--gray-4); line-height: 1.6; }
 
-.btn {
-  padding: 14px 32px;
-  border-radius: 6px;
-  font-size: 1.05rem;
-  font-weight: 600;
-  text-decoration: none;
-}
+  /* ── SUCCESS STORIES ── */
+  .success { background: var(--gray-1); }
+  .success-grid { display: grid; grid-template-columns: 1fr 1fr 1fr 1.2fr; gap: 24px; align-items: stretch; }
+  .success-card {
+    background: var(--white); border: 1px solid var(--gray-2);
+    border-radius: var(--radius); padding: 30px 26px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .success-card h3 { font-size: 15px; font-weight: 700; color: var(--navy); }
+  .success-card p { font-size: 13px; color: var(--gray-4); }
+  .success-number { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 28px; font-weight: 800; color: var(--blue); }
+  .testimonial-card {
+    background: var(--navy); border-radius: var(--radius); padding: 30px;
+    color: white; display: flex; flex-direction: column; justify-content: space-between; gap: 20px;
+  }
+  .testimonial-card .quote-icon { color: var(--blue-light); font-size: 32px; line-height: 1; margin-bottom: 4px; }
+  .testimonial-card p { font-size: 14px; color: #c4d0e8; line-height: 1.8; }
+  .testimonial-author { display: flex; align-items: center; gap: 12px; margin-top: 8px; }
+  .author-avatar {
+    width: 42px; height: 42px; border-radius: 50%;
+    background: var(--blue); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .author-name { font-size: 13px; font-weight: 600; color: white; }
+  .author-role { font-size: 12px; color: #8aa0c4; }
 
-.btn-primary {
-  background: var(--green-main);
-  color: #fff;
-}
+  /* ── BELT ── */
+  .belt {
+    background: var(--white); border-top: 1px solid var(--gray-2); border-bottom: 1px solid var(--gray-2);
+    padding: 30px 80px; display: flex; gap: 0; justify-content: center; flex-wrap: wrap;
+  }
+  .belt-item {
+    flex: 1; min-width: 140px; display: flex; flex-direction: column; align-items: center;
+    text-align: center; gap: 8px; padding: 12px 20px; border-right: 1px solid var(--gray-2);
+  }
+  .belt-item:last-child { border-right: none; }
+  .belt-item span { font-size: 13px; font-weight: 600; color: var(--gray-5); }
 
-.btn-primary:hover {
-  background: #177d40;
-}
+  /* ── CTA BANNER ── */
+  .cta-banner {
+    background: linear-gradient(120deg, #1338A0 0%, var(--blue) 55%, #3D9BE9 100%);
+    padding: 70px 80px;
+    display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap;
+  }
+  .cta-left { display: flex; align-items: center; gap: 28px; flex-wrap: wrap; }
+  .cta-banner h2 { font-size: clamp(22px, 3vw, 36px); font-weight: 800; color: white; margin-bottom: 10px; }
+  .cta-banner p { font-size: 15px; color: rgba(255,255,255,0.8); max-width: 480px; }
+  .btn-white {
+    background: white; color: var(--blue); border: none; border-radius: var(--radius-sm);
+    padding: 14px 28px; font-size: 15px; font-weight: 700;
+    cursor: pointer; text-decoration: none;
+    display: inline-flex; align-items: center; gap: 8px; white-space: nowrap;
+    transition: transform .2s, box-shadow .2s; flex-shrink: 0;
+  }
+  .btn-white:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
 
-.btn-outline {
-  border: 2px solid #fff;
-  color: #fff;
-}
+  /* ── CONTACT ── */
+  .contact { background: var(--white); padding: 80px; }
+  .contact-inner { display: grid; grid-template-columns: 1.2fr 1fr; gap: 80px; align-items: center; }
+  .contact h2 { font-size: clamp(24px, 3vw, 40px); font-weight: 800; color: var(--navy); margin-bottom: 12px; }
+  .contact .sub { font-size: 13px; font-weight: 600; letter-spacing: .1em; color: var(--blue); text-transform: uppercase; margin-bottom: 8px; }
+  .contact-items { display: flex; flex-direction: column; gap: 24px; margin-top: 36px; }
+  .contact-item { display: flex; align-items: flex-start; gap: 16px; }
+  .contact-icon { width: 44px; height: 44px; flex-shrink: 0; background: var(--blue-pale); border-radius: 10px; display: flex; align-items: center; justify-content: center; }
+  .contact-item h4 { font-size: 14px; font-weight: 700; color: var(--navy); margin-bottom: 3px; }
+  .contact-item p { font-size: 13px; color: var(--gray-4); }
 
-/* SECTION */
-section {
-  padding: 80px 0;
-}
+  /* ── FOOTER ── */
+  footer { background: var(--navy); color: #8aa0c4; padding: 60px 80px 30px; }
+  .footer-grid { display: grid; grid-template-columns: 1.6fr 1fr 1.4fr 1.2fr; gap: 48px; margin-bottom: 48px; }
+  .footer-brand p { font-size: 13px; line-height: 1.75; margin: 14px 0 0; color: #6e88b0; }
+  .footer-col h4 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 14px; font-weight: 700; color: white; margin-bottom: 18px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .footer-col ul a { font-size: 13px; color: #6e88b0; text-decoration: none; transition: color .15s; }
+  .footer-col ul a:hover { color: white; }
+  .footer-col p { font-size: 13px; color: #6e88b0; line-height: 1.7; }
+  .footer-bottom {
+    border-top: 1px solid #1e3356; padding-top: 24px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;
+  }
+  .footer-bottom span, .footer-bottom a { font-size: 12px; color: #4e6a90; text-decoration: none; }
+  .footer-bottom a:hover { color: white; }
+  .footer-bottom div { display: flex; gap: 20px; }
 
-section.light {
-  background: var(--bg-light);
-}
+  /* ── WHATSAPP FLOAT ── */
+  .wa-float {
+    position: fixed; bottom: 28px; right: 28px; z-index: 999;
+    width: 52px; height: 52px; border-radius: 50%;
+    background: #25D366;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 4px 16px rgba(37,211,102,0.45);
+    text-decoration: none; transition: transform .2s;
+  }
+  .wa-float:hover { transform: scale(1.1); }
 
-h2 {
-  text-align: center;
-  color: var(--blue-dark);
-  font-size: clamp(1.8rem, 4vw, 2.4rem);
-  margin-bottom: 50px;
-}
+  /* ════════════════════════════════
+     RESPONSIVE BREAKPOINTS
+  ════════════════════════════════ */
 
-/* ICON GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 30px;
-}
+  /* Tablet: ≤ 1024px */
+  @media (max-width: 1024px) {
+    .topbar { padding: 7px 24px; }
+    nav { padding: 0 24px; }
+    .nav-links { gap: 18px; }
+    .nav-links a { font-size: 13px; }
 
-.card {
-  background: #fff;
-  border-radius: 10px;
-  padding: 30px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
-  border-top: 5px solid var(--green-main);
-}
+    .hero { padding: 60px 40px; gap: 40px; min-height: auto; }
+    section { padding: 60px 40px; }
+    .contact { padding: 60px 40px; }
+    .belt { padding: 24px 40px; }
+    .cta-banner { padding: 60px 40px; }
+    footer { padding: 50px 40px 24px; }
 
-.card h3 {
-  margin: 15px 0;
-  color: var(--blue-dark);
-}
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .success-grid { grid-template-columns: 1fr 1fr; }
+    .testimonial-card { grid-column: span 2; }
+    .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+  }
 
-.icon {
-  font-size: 40px;
-  color: var(--green-main);
-}
+  /* Mobile: ≤ 768px */
+  @media (max-width: 768px) {
+    .topbar { padding: 7px 16px; font-size: 11px; }
+    .topbar .right { display: none; }
 
-/* PROCESS */
-.process {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 30px;
-  text-align: center;
-}
+    nav { padding: 0 16px; height: 60px; }
+    .nav-links { display: none; }
+    .nav-cta-desktop { display: none; }
+    .hamburger { display: flex; }
 
-.step {
-  padding: 25px;
-}
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 48px 20px 40px;
+      min-height: auto;
+      text-align: center;
+      gap: 36px;
+    }
+    .hero::before { display: none; }
+    .hero-eyebrow { margin-left: auto; margin-right: auto; }
+    .hero p { margin-left: auto; margin-right: auto; }
+    .hero-checks { justify-content: center; }
+    .hero-ctas { justify-content: center; }
+    .hero-visual { order: -1; }
+    .hero-visual svg { max-width: 300px; }
 
-.step span {
-  font-size: 42px;
-  color: var(--green-main);
-}
+    section { padding: 48px 20px; }
+    .section-sub { margin-bottom: 40px; font-size: 14px; }
 
-.step h4 {
-  margin: 15px 0;
-  color: var(--blue-dark);
-}
+    .services-grid { grid-template-columns: 1fr; gap: 16px; }
 
-/* CTA */
-.cta {
-  background: var(--blue-dark);
-  color: #fff;
-  text-align: center;
-  padding: 70px 20px;
-}
+    .industries-grid { gap: 12px; }
+    .industry-item { padding: 16px 18px; min-width: 100px; }
 
-.cta h2 {
-  color: #fff;
-}
+    .process-steps { flex-direction: column; align-items: center; gap: 28px; }
+    .process-arrow { display: none; }
+    .process-step { min-width: unset; width: 100%; max-width: 300px; }
 
-.cta p {
-  max-width: 700px;
-  margin: 20px auto 40px;
-  opacity: 0.95;
-}
+    .success-grid { grid-template-columns: 1fr; }
+    .testimonial-card { grid-column: span 1; }
 
-/* FOOTER */
-footer {
-  background: #0A1F3D;
-  color: #ccc;
-  text-align: center;
-  padding: 25px;
-  font-size: 0.9rem;
-}
+    .belt { padding: 20px 16px; gap: 0; }
+    .belt-item { min-width: 50%; border-right: none; border-bottom: 1px solid var(--gray-2); padding: 14px 12px; }
+    .belt-item:nth-child(odd) { border-right: 1px solid var(--gray-2); }
+    .belt-item:last-child, .belt-item:nth-last-child(2):nth-child(odd) { border-bottom: none; }
+
+    .cta-banner { padding: 48px 20px; flex-direction: column; text-align: center; }
+    .cta-left { flex-direction: column; align-items: center; text-align: center; gap: 16px; }
+    .cta-left svg { display: none; }
+    .btn-white { width: 100%; justify-content: center; }
+
+    .contact { padding: 48px 20px; }
+    .contact-inner { grid-template-columns: 1fr; gap: 0; }
+    .contact-inner > div:last-child { display: none; }
+
+    footer { padding: 40px 20px 20px; }
+    .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .footer-bottom { flex-direction: column; align-items: flex-start; gap: 10px; }
+  }
+
+  /* Small mobile: ≤ 480px */
+  @media (max-width: 480px) {
+    .hero h1 { font-size: 26px; }
+    .hero-ctas { flex-direction: column; }
+    .hero-ctas .btn-primary, .hero-ctas .btn-outline { text-align: center; }
+    .btn-primary, .btn-outline { width: 100%; text-align: center; }
+    .hero-ctas .btn-primary, .hero-ctas .btn-outline { width: auto; }
+    .industry-item { min-width: 90px; padding: 14px 12px; }
+  }
 </style>
-</head>
 
-<body>
 
-<header>
-  <div class="container header-wrap">
-    <img src="Digitizeyourprocess-logo-short.png" alt="Digitizeyourprocess Logo" class="logo">
-    <nav>
-      <a href="#services">Services</a>
-      <a href="#approach">Approach</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </div>
-</header>
 
-<section class="hero">
-  <div class="container">
-    <h1>Digitize Your Process.<br>Operate Smarter. Scale Faster.</h1>
-    <p>
-      We help organizations transform manual, paper-based, and Excel-driven workflows
-      into secure, automated, and scalable digital systems.
-    </p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Free Digitization Assessment</a>
-      <a href="#services" class="btn btn-outline">Our Services</a>
-    </div>
-  </div>
-</section>
 
-<section id="services" class="light">
-  <div class="container">
-    <h2>What We Digitize</h2>
-    <div class="grid">
-      <div class="card">
-        <div class="icon">📄</div>
-        <h3>Manual &amp; Paper Processes</h3>
-        <p>Convert offline workflows into structured digital systems.</p>
-      </div>
-      <div class="card">
-        <div class="icon">📊</div>
-        <h3>Excel-Driven Operations</h3>
-        <p>Replace fragile spreadsheets with controlled workflows.</p>
-      </div>
-      <div class="card">
-        <div class="icon">🔄</div>
-        <h3>Approval &amp; Tracking</h3>
-        <p>Digitize approvals, audit trails, and reporting.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section id="approach">
-  <div class="container">
-    <h2>Our Digitization Approach</h2>
-    <div class="process">
-      <div class="step">
-        <span>🔍</span>
-        <h4>Assess</h4>
-        <p>Understand current workflows and pain points.</p>
-      </div>
-      <div class="step">
-        <span>🧠</span>
-        <h4>Design</h4>
-        <p>Create optimized digital process blueprints.</p>
-      </div>
-      <div class="step">
-        <span>⚙️</span>
-        <h4>Implement</h4>
-        <p>Digitize using the right tools and integrations.</p>
-      </div>
-      <div class="step">
-        <span>📈</span>
-        <h4>Optimize</h4>
-        <p>Improve automation, reporting, and adoption.</p>
-      </div>
-    </div>
-  </div>
-</section>
 
-<section class="cta" id="contact">
-  <h2>Ready to Digitize Your Process?</h2>
-  <p>
-    Start with a free consultation and see where you can save time,
-    reduce errors, and scale operations.
-  </p>
-  <a href="mailto:digitizeyourprocess@gmail.com" class="btn btn-primary">
-    Talk to a Consultant
-  </a>
-</section>
 
-<footer>
-  © 2026 Digitize Your Process. All rights reserved.
-</footer>
-<script type="application/ld+json">
-{
+
+
+
+
+
+<script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "Organization",
   "name": "Digitize Your Process",
   "url": "https://digitizeyourprocess.com",
   "logo": "https://digitizeyourprocess.com/Digitizeyourprocess-logo-short.png",
-  "description": "Digitization consulting for transforming offline and manual business processes into scalable digital workflows.",
-  "sameAs": [
-    "https://www.linkedin.com/company/digitizeyourprocess"
-  ],
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "contactType": "Business Inquiry",
-    "email": "digitizeyourprocess@gmail.com"
+  "email": "digitizeyourprocess@gmail.com",
+  "description": "Business process automation, digital transformation, workflow automation and custom software development services."
+}</script></head>
+<body>
+<!-- TOP BAR -->
+<div class="topbar">
+<span>✉ digitizeyourprocess@gmail.com  ·  Let's digitize. Automate. Grow.</span>
+<div class="right">
+<span>📞 Quick Call</span>
+<span style="color:#25D366;">●</span>
+</div>
+</div>
+<!-- NAV -->
+<nav>
+<a class="logo" href="#">
+<svg class="logo-icon" fill="none" viewbox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
+<rect fill="#EBF1FF" height="38" rx="8" width="38"></rect>
+<path d="M9 10h8a10 10 0 010 18H9V10z" fill="#1E5CF5"></path>
+<path d="M20 14h5a6 6 0 010 12h-5V14z" fill="#3D9BE9" opacity=".7"></path>
+<circle cx="28" cy="11" fill="#00C2CB" r="3"></circle>
+</svg>
+<div class="logo-text">Digitize<span>Your Process</span></div>
+</a>
+<ul class="nav-links">
+<li><a href="#hero">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#industries">Industries</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#stories">Case Studies</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+<a class="btn-primary nav-cta-desktop" href="#contact">Book Free Audit</a>
+<button aria-label="Toggle menu" class="hamburger" id="hamburger">
+<span></span><span></span><span></span>
+</button>
+</nav>
+<!-- MOBILE NAV DRAWER -->
+<div class="mobile-nav" id="mobileNav">
+<a href="#hero" onclick="closeNav()">Home</a>
+<a href="#services" onclick="closeNav()">Services</a>
+<a href="#industries" onclick="closeNav()">Industries</a>
+<a href="#process" onclick="closeNav()">Process</a>
+<a href="#stories" onclick="closeNav()">Case Studies</a>
+<a href="#about" onclick="closeNav()">About Us</a>
+<a href="#contact" onclick="closeNav()">Contact</a>
+<a class="btn-primary" href="#contact" onclick="closeNav()">Book Free Audit</a>
+</div>
+<!-- HERO -->
+<section class="hero" id="hero">
+<div>
+<div class="hero-eyebrow">Digitize · Automate · Transform</div>
+<h1>Digitize Manual Processes.<br/><span class="accent">Scale Your Business.</span></h1>
+<p>We help businesses replace spreadsheets, emails, paper forms and manual workflows with secure, intelligent, and scalable digital solutions.</p>
+<div class="hero-checks">
+<div class="hero-check">
+<svg fill="none" height="18" viewbox="0 0 18 18" width="18"><circle cx="9" cy="9" fill="#EBF1FF" r="9"></circle><path d="M5 9l3 3 5-5" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        Save up to 70% Operational Effort
+      </div>
+<div class="hero-check">
+<svg fill="none" height="18" viewbox="0 0 18 18" width="18"><circle cx="9" cy="9" fill="#EBF1FF" r="9"></circle><path d="M5 9l3 3 5-5" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        Improve Accuracy &amp; Visibility
+      </div>
+<div class="hero-check">
+<svg fill="none" height="18" viewbox="0 0 18 18" width="18"><circle cx="9" cy="9" fill="#EBF1FF" r="9"></circle><path d="M5 9l3 3 5-5" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+        Faster Approvals &amp; Better Decisions
+      </div>
+</div>
+<div class="hero-ctas">
+<a class="btn-primary" href="#contact">Book Free Process Audit →</a>
+<a class="btn-outline" href="#services">View Our Services</a>
+</div>
+</div>
+<div class="hero-visual">
+<svg fill="none" viewbox="0 0 480 380" xmlns="http://www.w3.org/2000/svg">
+<circle cx="260" cy="190" fill="#DCEAFF" opacity=".4" r="160"></circle>
+<circle cx="260" cy="190" fill="#C7D9FF" opacity=".3" r="120"></circle>
+<ellipse cx="260" cy="60" fill="#fff" rx="70" ry="38" stroke="#C7D9FF" stroke-width="2"></ellipse>
+<ellipse cx="230" cy="72" fill="#EBF1FF" rx="45" ry="30"></ellipse>
+<ellipse cx="295" cy="72" fill="#EBF1FF" rx="45" ry="30"></ellipse>
+<path d="M260 95V130" stroke="#1E5CF5" stroke-linecap="round" stroke-width="3"></path>
+<path d="M248 107l12-13 12 13" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"></path>
+<rect fill="#1E3A6E" height="155" rx="12" width="260" x="90" y="180"></rect>
+<rect fill="#fff" height="135" rx="8" width="240" x="100" y="188"></rect>
+<rect fill="#F7F9FC" height="119" rx="5" width="224" x="108" y="196"></rect>
+<rect fill="#C7D9FF" height="35" rx="3" width="18" x="120" y="270"></rect>
+<rect fill="#1E5CF5" height="50" rx="3" width="18" x="144" y="255"></rect>
+<rect fill="#3D9BE9" height="43" rx="3" width="18" x="168" y="262"></rect>
+<rect fill="#1E5CF5" height="57" rx="3" width="18" x="192" y="248"></rect>
+<rect fill="#C7D9FF" height="47" rx="3" width="18" x="216" y="258"></rect>
+<rect fill="#1E5CF5" height="62" rx="3" width="18" x="240" y="243"></rect>
+<rect fill="#3D9BE9" height="44" rx="3" width="18" x="264" y="261"></rect>
+<rect fill="#E2EAF8" height="8" rx="4" width="80" x="116" y="202"></rect>
+<rect fill="#EBF1FF" height="6" rx="3" width="55" x="116" y="215"></rect>
+<rect fill="#EBF1FF" height="34" rx="6" width="62" x="258" y="202"></rect>
+<rect fill="#C7D9FF" height="5" rx="2.5" width="50" x="264" y="208"></rect>
+<rect fill="#C7D9FF" height="5" rx="2.5" width="36" x="264" y="217"></rect>
+<rect fill="#C7D9FF" height="5" rx="2.5" width="42" x="264" y="226"></rect>
+<rect fill="#152C54" height="14" rx="7" width="280" x="80" y="338"></rect>
+<rect fill="#1E3A6E" height="128" rx="10" width="70" x="355" y="195"></rect>
+<rect fill="#F7F9FC" height="114" rx="7" width="60" x="360" y="202"></rect>
+<rect fill="#EBF1FF" height="8" rx="4" width="48" x="366" y="210"></rect>
+<rect fill="#C7D9FF" height="40" opacity=".6" rx="5" width="48" x="366" y="223"></rect>
+<circle cx="390" cy="243" fill="none" r="15" stroke="#1E5CF5" stroke-dasharray="47 94" stroke-width="6"></circle>
+<circle cx="390" cy="243" fill="none" r="15" stroke="#3D9BE9" stroke-dasharray="30 94" stroke-dashoffset="-47" stroke-width="6"></circle>
+<circle cx="390" cy="243" fill="none" r="15" stroke="#C7D9FF" stroke-dasharray="17 94" stroke-dashoffset="-77" stroke-width="6"></circle>
+<rect fill="#C7D9FF" height="4" rx="2" width="30" x="366" y="268"></rect>
+<rect fill="#EBF1FF" height="4" rx="2" width="22" x="366" y="276"></rect>
+<rect fill="#C7D9FF" height="4" rx="2" width="26" x="366" y="284"></rect>
+<rect fill="#1E3A6E" height="70" rx="8" width="50" x="55" y="220"></rect>
+<rect fill="#F7F9FC" height="58" rx="5" width="40" x="60" y="226"></rect>
+<rect fill="#EBF1FF" height="5" rx="2.5" width="32" x="64" y="232"></rect>
+<rect fill="#EBF1FF" height="20" rx="3" width="32" x="64" y="241"></rect>
+<rect fill="#C7D9FF" height="14" rx="2" width="6" x="67" y="244"></rect>
+<rect fill="#1E5CF5" height="10" rx="2" width="6" x="76" y="248"></rect>
+<rect fill="#3D9BE9" height="12" rx="2" width="6" x="85" y="246"></rect>
+<defs><filter id="sh1"><fedropshadow dx="0" dy="4" flood-color="#1E5CF5" flood-opacity=".15" stddeviation="8"></fedropshadow></filter></defs>
+<rect fill="white" filter="url(#sh1)" height="50" rx="10" width="140" x="320" y="145"></rect>
+<circle cx="340" cy="170" fill="#EBF1FF" r="12"></circle>
+<path d="M334 170l4 4 7-7" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<rect fill="#E2EAF8" height="6" rx="3" width="60" x="356" y="158"></rect>
+<rect fill="#EBF1FF" height="5" rx="2.5" width="44" x="356" y="168"></rect>
+<rect fill="#EBF1FF" height="5" rx="2.5" width="52" x="356" y="177"></rect>
+<rect fill="white" filter="url(#sh1)" height="42" rx="10" width="90" x="30" y="155"></rect>
+<rect fill="#EBF1FF" height="20" rx="5" width="20" x="38" y="165"></rect>
+<path d="M44 175l3 3 6-6" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<rect fill="#E2EAF8" height="6" rx="3" width="48" x="62" y="163"></rect>
+<rect fill="#EBF1FF" height="5" rx="2.5" width="34" x="62" y="173"></rect>
+<rect fill="#EBF1FF" height="5" rx="2.5" width="40" x="62" y="182"></rect>
+<rect fill="#1E3A6E" height="28" rx="4" width="20" x="175" y="322"></rect>
+<path d="M185 310 Q178 295 168 288" fill="none" stroke="#2A6B3F" stroke-linecap="round" stroke-width="3"></path>
+<ellipse cx="165" cy="284" fill="#2ECC71" opacity=".85" rx="14" ry="10"></ellipse>
+<path d="M185 310 Q192 295 202 288" fill="none" stroke="#2A6B3F" stroke-linecap="round" stroke-width="3"></path>
+<ellipse cx="205" cy="284" fill="#27AE60" opacity=".85" rx="14" ry="10"></ellipse>
+<path d="M185 318 Q185 300 185 285" fill="none" stroke="#2A6B3F" stroke-linecap="round" stroke-width="3"></path>
+</svg>
+</div>
+</section>
+<!-- SERVICES -->
+<section class="services" id="services">
+<div class="eyebrow">What We Do</div>
+<h2 class="section-title">Our Services</h2>
+<p class="section-sub">End-to-end digital solutions to automate, simplify and transform your business.</p>
+<div class="services-grid">
+<div class="service-card">
+<svg class="service-icon" fill="none" viewbox="0 0 44 44"><rect fill="#EBF1FF" height="44" rx="10" width="44"></rect><circle cx="22" cy="22" r="7" stroke="#1E5CF5" stroke-width="2"></circle><path d="M22 11v3M22 30v3M11 22h3M30 22h3" stroke="#1E5CF5" stroke-linecap="round" stroke-width="2"></path><path d="M14.9 14.9l2.1 2.1M26.9 26.9l2.1 2.1M14.9 29.1l2.1-2.1M26.9 17.1l2.1-2.1" stroke="#1E5CF5" stroke-linecap="round" stroke-width="2"></path></svg>
+<h3>Business Process Automation</h3>
+<p>Automate repetitive tasks and complex workflows to increase productivity and reduce operational costs.</p>
+<a class="learn-more" href="#">Learn more →</a>
+</div>
+<div class="service-card">
+<svg class="service-icon" fill="none" viewbox="0 0 44 44"><rect fill="#EBF1FF" height="44" rx="10" width="44"></rect><rect height="24" rx="4" stroke="#1E5CF5" stroke-width="2" width="24" x="10" y="10"></rect><path d="M14 16h16M14 21h16M14 26h10" stroke="#1E5CF5" stroke-linecap="round" stroke-width="2"></path><circle cx="32" cy="32" fill="#EBF1FF" r="6" stroke="#1E5CF5" stroke-width="1.5"></circle><path d="M30 32h4M32 30v4" stroke="#1E5CF5" stroke-linecap="round" stroke-width="1.5"></path></svg>
+<h3>Excel to Web Applications</h3>
+<p>Replace complex spreadsheets with secure, scalable and collaborative web applications.</p>
+<a class="learn-more" href="#">Learn more →</a>
+</div>
+<div class="service-card">
+<svg class="service-icon" fill="none" viewbox="0 0 44 44"><rect fill="#EBF1FF" height="44" rx="10" width="44"></rect><rect height="7" rx="2" stroke="#1E5CF5" stroke-width="2" width="8" x="18" y="10"></rect><rect height="7" rx="2" stroke="#1E5CF5" stroke-width="2" width="8" x="10" y="27"></rect><rect height="7" rx="2" stroke="#1E5CF5" stroke-width="2" width="8" x="26" y="27"></rect><path d="M22 17v4M22 21l-8 5M22 21l8 5" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<h3>Workflow Management Systems</h3>
+<p>Design intelligent workflows with role-based approvals, notifications and real-time tracking.</p>
+<a class="learn-more" href="#">Learn more →</a>
+</div>
+<div class="service-card">
+<svg class="service-icon" fill="none" viewbox="0 0 44 44"><rect fill="#EBF1FF" height="44" rx="10" width="44"></rect><path d="M16 20l-4 3 4 3" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M28 20l4 3-4 3" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M25 14l-6 16" stroke="#1E5CF5" stroke-linecap="round" stroke-width="2"></path></svg>
+<h3>Custom Software Development</h3>
+<p>Build custom internal tools and business applications tailored to your unique requirements.</p>
+<a class="learn-more" href="#">Learn more →</a>
+</div>
+<div class="service-card">
+<svg class="service-icon" fill="none" viewbox="0 0 44 44"><rect fill="#EBF1FF" height="44" rx="10" width="44"></rect><rect height="14" rx="4" stroke="#1E5CF5" stroke-width="2" width="16" x="14" y="16"></rect><circle cx="19" cy="22" fill="#1E5CF5" r="2"></circle><circle cx="25" cy="22" fill="#1E5CF5" r="2"></circle><path d="M19 26h6" stroke="#1E5CF5" stroke-linecap="round" stroke-width="1.5"></path><path d="M17 16v-3M22 13v3M27 16v-3" stroke="#1E5CF5" stroke-linecap="round" stroke-width="2"></path></svg>
+<h3>AI-Powered Automation</h3>
+<p>Leverage AI and automation to eliminate manual work and gain actionable insights for better decisions.</p>
+<a class="learn-more" href="#">Learn more →</a>
+</div>
+<div class="service-card">
+<svg class="service-icon" fill="none" viewbox="0 0 44 44"><rect fill="#EBF1FF" height="44" rx="10" width="44"></rect><path d="M13 30l5-7 5 4 5-9 5 5" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><rect fill="#1E5CF5" height="6" opacity=".3" rx="2" width="6" x="10" y="10"></rect><rect fill="#1E5CF5" height="6" opacity=".3" rx="2" width="6" x="28" y="10"></rect><rect fill="#1E5CF5" height="6" opacity=".3" rx="2" width="6" x="10" y="28"></rect><rect fill="#1E5CF5" height="6" opacity=".3" rx="2" width="6" x="28" y="28"></rect></svg>
+<h3>Digital Transformation Consulting</h3>
+<p>Get expert guidance and a roadmap to modernize your processes and systems for the future.</p>
+<a class="learn-more" href="#">Learn more →</a>
+</div>
+</div>
+</section>
+<!-- INDUSTRIES -->
+<section class="industries" id="industries">
+<div class="eyebrow">Industries We Serve</div>
+<h2 class="section-title">Solutions for Every Industry</h2>
+<p class="section-sub" style="margin-bottom:48px;">Tailored digital solutions across diverse sectors worldwide.</p>
+<div class="industries-grid">
+<div class="industry-item">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><rect fill="#1E5CF5" height="10" rx="1.5" width="6" x="8" y="18"></rect><rect fill="#1E5CF5" height="15" opacity=".7" rx="1.5" width="6" x="15" y="13"></rect><rect fill="#3D9BE9" height="18" rx="1.5" width="6" x="22" y="10"></rect></svg>
+<span>Manufacturing</span>
+</div>
+<div class="industry-item">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><path d="M18 9a4 4 0 100 8 4 4 0 000-8zM10 27c0-4 3.6-7 8-7s8 3 8 7" stroke="#1E5CF5" stroke-linecap="round" stroke-width="2"></path><path d="M23 15l3 3" stroke="#00C2CB" stroke-linecap="round" stroke-width="2"></path></svg>
+<span>Healthcare</span>
+</div>
+<div class="industry-item">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><rect height="12" rx="3" stroke="#1E5CF5" stroke-width="2" width="18" x="9" y="14"></rect><path d="M14 14v-2a4 4 0 018 0v2" stroke="#1E5CF5" stroke-width="2"></path><circle cx="18" cy="20" fill="#1E5CF5" r="2"></circle></svg>
+<span>Finance</span>
+</div>
+<div class="industry-item">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><path d="M18 9l2 6h6l-5 3.6 1.9 6L18 21l-4.9 3.6 1.9-6L10 15h6l2-6z" stroke="#1E5CF5" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Education</span>
+</div>
+<div class="industry-item">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><circle cx="14" cy="15" r="5" stroke="#1E5CF5" stroke-width="2"></circle><circle cx="24" cy="15" r="5" stroke="#1E5CF5" stroke-width="2"></circle><path d="M8 28c0-3.3 2.7-6 6-6M22 22c3.3 0 6 2.7 6 6" stroke="#1E5CF5" stroke-linecap="round" stroke-width="2"></path></svg>
+<span>HR &amp; Staffing</span>
+</div>
+<div class="industry-item">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><rect height="10" rx="3" stroke="#1E5CF5" stroke-width="2" width="22" x="7" y="17"></rect><path d="M11 17v-4a7 7 0 0114 0v4" stroke="#1E5CF5" stroke-width="2"></path><circle cx="11" cy="27" fill="#EBF1FF" r="3" stroke="#1E5CF5" stroke-width="1.5"></circle><circle cx="25" cy="27" fill="#EBF1FF" r="3" stroke="#1E5CF5" stroke-width="1.5"></circle></svg>
+<span>Logistics</span>
+</div>
+<div class="industry-item">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><path d="M10 25V15l8-6 8 6v10H10z" stroke="#1E5CF5" stroke-linejoin="round" stroke-width="2"></path><rect height="6" rx="1" stroke="#1E5CF5" stroke-width="1.5" width="6" x="15" y="19"></rect></svg>
+<span>Retail</span>
+</div>
+<div class="industry-item">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><path d="M18 10l1.5 3.5 3.5.5-2.5 2.5.5 3.5L18 18.5l-3 1.5.5-3.5-2.5-2.5 3.5-.5L18 10z" fill="#1E5CF5"></path><path d="M10 27c4-5 12-5 16 0" stroke="#3D9BE9" stroke-linecap="round" stroke-width="2"></path></svg>
+<span>Startups &amp; SMEs</span>
+</div>
+</div>
+</section>
+<!-- HOW WE WORK -->
+<section class="process" id="process">
+<div class="eyebrow">Our Process</div>
+<h2 class="section-title">How We Work</h2>
+<p class="section-sub">A clear, proven five-step path from discovery to ongoing support.</p>
+<div class="process-steps">
+<div class="process-step">
+<div class="step-num-wrap">
+<div class="step-circle">01</div>
+<div class="step-icon-top"><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><circle cx="7" cy="7" r="4" stroke="#1E5CF5" stroke-width="1.5"></circle><path d="M10 10l3 3" stroke="#1E5CF5" stroke-linecap="round" stroke-width="1.5"></path></svg></div>
+</div>
+<h3>Discover</h3>
+<p>We understand your business and challenges</p>
+</div>
+<div class="process-arrow">›</div>
+<div class="process-step">
+<div class="step-num-wrap">
+<div class="step-circle">02</div>
+<div class="step-icon-top"><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><rect height="12" rx="2" stroke="#1E5CF5" stroke-width="1.5" width="10" x="3" y="2"></rect><path d="M5 6h6M5 9h4" stroke="#1E5CF5" stroke-linecap="round" stroke-width="1.2"></path></svg></div>
+</div>
+<h3>Audit</h3>
+<p>We analyze your processes and identify opportunities</p>
+</div>
+<div class="process-arrow">›</div>
+<div class="process-step">
+<div class="step-num-wrap">
+<div class="step-circle">03</div>
+<div class="step-icon-top"><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M3 13l3-1 7-7-2-2-7 7-1 3z" stroke="#1E5CF5" stroke-linejoin="round" stroke-width="1.5"></path></svg></div>
+</div>
+<h3>Design</h3>
+<p>We design the right digital solution and roadmap</p>
+</div>
+<div class="process-arrow">›</div>
+<div class="process-step">
+<div class="step-num-wrap">
+<div class="step-circle">04</div>
+<div class="step-icon-top"><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M5 10l-2 2 2 2M11 10l2 2-2 2M8 4l-2 9" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg></div>
+</div>
+<h3>Develop</h3>
+<p>We build, test and deploy your solution</p>
+</div>
+<div class="process-arrow">›</div>
+<div class="process-step">
+<div class="step-num-wrap">
+<div class="step-circle">05</div>
+<div class="step-icon-top"><svg fill="none" height="16" viewbox="0 0 16 16" width="16"><path d="M8 3l1.5 3 3.5.5-2.5 2.4.6 3.6L8 11l-3.1 1.5.6-3.6L3 6.5l3.5-.5L8 3z" stroke="#1E5CF5" stroke-linejoin="round" stroke-width="1.3"></path></svg></div>
+</div>
+<h3>Deliver &amp; Support</h3>
+<p>We train your team and provide ongoing support</p>
+</div>
+</div>
+</section>
+<!-- SUCCESS STORIES -->
+<section class="success" id="stories">
+<div class="eyebrow">Success Stories</div>
+<h2 class="section-title">Real Results. Real Impact.</h2>
+<p class="section-sub">Businesses transformed — measured in hours saved, errors eliminated, and growth unlocked.</p>
+<div class="success-grid">
+<div class="success-card">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><circle cx="18" cy="18" r="7" stroke="#1E5CF5" stroke-width="2"></circle><path d="M18 13v5l3 3" stroke="#1E5CF5" stroke-linecap="round" stroke-width="2"></path></svg>
+<h3>Approval Workflow Automation</h3>
+<p>Reduced approval cycle from 3 days to</p>
+<div class="success-number">30 minutes</div>
+</div>
+<div class="success-card">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><circle cx="18" cy="15" r="5" stroke="#1E5CF5" stroke-width="2"></circle><path d="M10 29c0-4 3.6-7 8-7s8 3 8 7" stroke="#1E5CF5" stroke-linecap="round" stroke-width="2"></path><path d="M23 11l3 3" stroke="#00C2CB" stroke-linecap="round" stroke-width="2"></path></svg>
+<h3>Digital Onboarding System</h3>
+<p>Saved over</p>
+<div class="success-number">200+ hours</div>
+<p>annually</p>
+</div>
+<div class="success-card">
+<svg fill="none" height="36" viewbox="0 0 36 36" width="36"><rect fill="#EBF1FF" height="36" rx="8" width="36"></rect><path d="M9 26l4-6 5 3 5-7 4 4" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<h3>Inventory Management System</h3>
+<p>Improved accuracy by</p>
+<div class="success-number">95%</div>
+<p>and reduced stockouts</p>
+</div>
+<div class="testimonial-card">
+<div>
+<div class="quote-icon">"</div>
+<p>Digitize Your Process transformed our manual operations into a seamless digital workflow. The impact on our productivity has been remarkable.</p>
+</div>
+<div class="testimonial-author">
+<div class="author-avatar">
+<svg fill="none" height="28" viewbox="0 0 28 28" width="28"><circle cx="14" cy="11" fill="#6b9ae8" r="5"></circle><path d="M5 26c0-5 4-8 9-8s9 3 9 8" fill="#4a7bcf"></path></svg>
+</div>
+<div>
+<div class="author-name">Operations Head</div>
+<div class="author-role">Manufacturing Company</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- BELT -->
+<div class="belt">
+<div class="belt-item">
+<svg fill="none" height="28" viewbox="0 0 28 28" width="28"><circle cx="14" cy="14" r="7" stroke="#1E5CF5" stroke-width="2"></circle><path d="M10 14l3 3 5-5" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Reduce Operational Costs</span>
+</div>
+<div class="belt-item">
+<svg fill="none" height="28" viewbox="0 0 28 28" width="28"><path d="M7 20l3-5 4 3 4-7 4 4" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Increase Productivity</span>
+</div>
+<div class="belt-item">
+<svg fill="none" height="28" viewbox="0 0 28 28" width="28"><path d="M14 5a9 9 0 100 18A9 9 0 0014 5zM10 14l3 3 5-5" stroke="#1E5CF5" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Improve Accuracy</span>
+</div>
+<div class="belt-item">
+<svg fill="none" height="28" viewbox="0 0 28 28" width="28"><circle cx="14" cy="14" r="7" stroke="#1E5CF5" stroke-width="2"></circle><path d="M14 10v4l2 2" stroke="#1E5CF5" stroke-linecap="round" stroke-width="2"></path></svg>
+<span>Real-time Visibility</span>
+</div>
+<div class="belt-item">
+<svg fill="none" height="28" viewbox="0 0 28 28" width="28"><rect height="12" rx="2" stroke="#1E5CF5" stroke-width="2" width="8" x="5" y="10"></rect><rect height="16" rx="2" stroke="#1E5CF5" stroke-width="2" width="8" x="15" y="6"></rect></svg>
+<span>Scalable &amp; Future Ready</span>
+</div>
+<div class="belt-item">
+<svg fill="none" height="28" viewbox="0 0 28 28" width="28"><path d="M14 5l2 5 5 .7-3.5 3.4.8 5L14 17l-4.3 2.1.8-5L7 10.7 12 10l2-5z" stroke="#1E5CF5" stroke-linejoin="round" stroke-width="2"></path></svg>
+<span>Better Customer Experience</span>
+</div>
+</div>
+<!-- CTA BANNER -->
+<div class="cta-banner" id="about">
+<div class="cta-left">
+<svg fill="none" height="90" style="flex-shrink:0;" viewbox="0 0 90 90" width="90">
+<circle cx="45" cy="45" fill="rgba(255,255,255,0.08)" r="42"></circle>
+<path d="M45 15c8 0 18 8 18 22 0 10-6 20-18 28C33 57 27 47 27 37c0-14 10-22 18-22z" fill="white" opacity=".2"></path>
+<path d="M45 65l-5 10 5-4 5 4-5-10z" fill="#FFD700"></path>
+<ellipse cx="45" cy="40" fill="white" opacity=".9" rx="10" ry="16"></ellipse>
+<circle cx="45" cy="36" fill="#1E5CF5" r="4"></circle>
+<path d="M35 46c-4 2-8 6-8 10l5-2M55 46c4 2 8 6 8 10l-5-2" opacity=".7" stroke="white" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<div>
+<h2>Ready to Digitize Your Processes?</h2>
+<p>Book your free process audit today and discover how much time and money your business can save.</p>
+</div>
+</div>
+<a class="btn-white" href="#contact">Book Free Audit Now →</a>
+</div>
+<!-- CONTACT -->
+<section class="contact" id="contact">
+<div class="contact-inner">
+<div>
+<div class="sub">Get In Touch</div>
+<h2>Let's Build Your Digital Future</h2>
+<div class="contact-items">
+<div class="contact-item">
+<div class="contact-icon">
+<svg fill="none" height="22" viewbox="0 0 22 22" width="22"><rect height="14" rx="3" stroke="#1E5CF5" stroke-width="1.8" width="18" x="2" y="4"></rect><path d="M2 7l9 6 9-6" stroke="#1E5CF5" stroke-linecap="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4>Email</h4>
+<p>digitizeyourprocess@gmail.com</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<svg fill="none" height="22" viewbox="0 0 22 22" width="22"><circle cx="11" cy="11" r="8" stroke="#1E5CF5" stroke-width="1.8"></circle><path d="M11 7v4l3 3" stroke="#1E5CF5" stroke-linecap="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4>Response Time</h4>
+<p>Within 24 Hours</p>
+</div>
+</div>
+<div class="contact-item">
+<div class="contact-icon">
+<svg fill="none" height="22" viewbox="0 0 22 22" width="22"><path d="M6 2h4l2 5-2.5 1.5a11 11 0 005 5L16 11l5 2v4a2 2 0 01-2 2A17 17 0 013 4a2 2 0 012-2z" stroke="#1E5CF5" stroke-linejoin="round" stroke-width="1.8"></path></svg>
+</div>
+<div>
+<h4>Let's Talk</h4>
+<p>Schedule a Free Consultation</p>
+</div>
+</div>
+</div>
+</div>
+<div style="display:flex;justify-content:center;">
+<svg fill="none" height="260" viewbox="0 0 320 260" width="320">
+<ellipse cx="160" cy="130" fill="#EBF1FF" opacity=".5" rx="130" ry="110"></ellipse>
+<ellipse cx="160" cy="195" fill="#C7D9FF" opacity=".5" rx="48" ry="15"></ellipse>
+<rect fill="#1E5CF5" height="45" rx="10" width="50" x="135" y="155"></rect>
+<circle cx="160" cy="138" fill="#FDDCB5" r="22"></circle>
+<path d="M138 128c0-12 10-22 22-22s22 10 22 22v4c-4-6-12-10-22-10s-18 4-22 10v-4z" fill="#2D3748"></path>
+<circle cx="153" cy="138" fill="#4A4A4A" r="2.5"></circle>
+<circle cx="167" cy="138" fill="#4A4A4A" r="2.5"></circle>
+<path d="M154 146c2 3 10 3 12 0" stroke="#E0845A" stroke-linecap="round" stroke-width="1.5"></path>
+<rect fill="#1E3A6E" height="44" rx="6" width="76" x="122" y="185"></rect>
+<rect fill="#F0F4FF" height="36" rx="4" width="66" x="127" y="189"></rect>
+<rect fill="#C7D9FF" height="4" rx="2" width="40" x="133" y="195"></rect>
+<rect fill="#EBF1FF" height="4" rx="2" width="28" x="133" y="203"></rect>
+<rect fill="#C7D9FF" height="4" rx="2" width="36" x="133" y="211"></rect>
+<rect fill="#EBF1FF" height="4" rx="2" width="20" x="133" y="219"></rect>
+<rect fill="white" height="40" rx="10" stroke="#C7D9FF" stroke-width="1.5" width="100" x="195" y="80"></rect>
+<path d="M195 105l-12 10 4-10" fill="white" stroke="#C7D9FF" stroke-width="1.5"></path>
+<rect fill="#E2EAF8" height="5" rx="2.5" width="70" x="203" y="90"></rect>
+<rect fill="#EBF1FF" height="5" rx="2.5" width="50" x="203" y="100"></rect>
+<rect fill="#EBF1FF" height="40" rx="10" stroke="#C7D9FF" stroke-width="1.5" width="100" x="30" y="60"></rect>
+<path d="M130 85l12 10-4-10" fill="#EBF1FF" stroke="#C7D9FF" stroke-width="1.5"></path>
+<rect fill="#C7D9FF" height="5" rx="2.5" width="66" x="40" y="70"></rect>
+<rect fill="#B0C4DE" height="5" rx="2.5" width="48" x="40" y="80"></rect>
+<rect fill="#2D5A3D" height="20" rx="4" width="16" x="252" y="215"></rect>
+<path d="M260 215 Q252 200 242 193" fill="none" stroke="#2ECC71" stroke-linecap="round" stroke-width="2.5"></path>
+<ellipse cx="238" cy="190" fill="#27AE60" rx="12" ry="8"></ellipse>
+<path d="M260 215 Q268 200 278 193" fill="none" stroke="#2ECC71" stroke-linecap="round" stroke-width="2.5"></path>
+<ellipse cx="282" cy="190" fill="#2ECC71" rx="12" ry="8"></ellipse>
+</svg>
+</div>
+</div>
+</section>
+<!-- FOOTER -->
+<footer>
+<div class="footer-grid">
+<div class="footer-brand">
+<a class="logo" href="#">
+<svg fill="none" height="36" viewbox="0 0 38 38" width="36"><rect fill="#1E3A6E" height="38" rx="8" width="38"></rect><path d="M9 10h8a10 10 0 010 18H9V10z" fill="#3D7BFF"></path><path d="M20 14h5a6 6 0 010 12h-5V14z" fill="#6BA3FF" opacity=".7"></path><circle cx="28" cy="11" fill="#00C2CB" r="3"></circle></svg>
+<div class="logo-text" style="color:white;">Digitize<span style="color:#6BA3FF;">Your Process</span></div>
+</a>
+<p>Helping businesses automate, simplify and transform through smart digital solutions.</p>
+</div>
+<div class="footer-col">
+<h4>Quick Links</h4>
+<ul>
+<li><a href="#hero">Home</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#industries">Industries</a></li>
+<li><a href="#process">Process</a></li>
+<li><a href="#stories">Case Studies</a></li>
+<li><a href="#about">About Us</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Our Services</h4>
+<ul>
+<li><a href="#">Business Process Automation</a></li>
+<li><a href="#">Excel to Web Applications</a></li>
+<li><a href="#">Workflow Management</a></li>
+<li><a href="#">Custom Software Development</a></li>
+<li><a href="#">AI-Powered Automation</a></li>
+<li><a href="#">Digital Transformation Consulting</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Contact Us</h4>
+<p style="margin-bottom:12px;">digitizeyourprocess@gmail.com</p>
+<p style="display:flex;align-items:center;gap:6px;"><span style="color:#25D366;font-size:16px;">●</span> Quick Call</p>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 Digitize Your Process. All Rights Reserved.</span>
+<div>
+<a href="#">Privacy Policy</a>
+<a href="#">Terms &amp; Conditions</a>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Float -->
+<a class="wa-float" href="#" title="Chat on WhatsApp">
+<svg fill="white" height="26" viewbox="0 0 26 26" width="26"><path d="M13 1C6.4 1 1 6.4 1 13c0 2.1.5 4.2 1.5 6L1 25l6.3-1.5C9.1 24.5 11 25 13 25c6.6 0 12-5.4 12-12S19.6 1 13 1zm6 16.5c-.3.8-1.4 1.4-1.9 1.5-.5.1-1.1.2-3.3-.7-2.8-1.1-4.6-4-4.7-4.2-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5l.7 1.8c.1.2.1.5 0 .7l-.5.7-.4.5c.2.4 1 1.5 1.8 2.1.8.7 1.8 1.1 2.1 1.2.3.1.5.1.7-.1l.6-.7c.2-.3.4-.4.6-.3l1.8.9c.2.1.4.2.5.4.1.3 0 1.5-.4 2.5z"></path></svg>
+</a>
+<script>
+  // Hamburger toggle
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileNav.classList.toggle('open');
+  });
+  function closeNav() {
+    hamburger.classList.remove('open');
+    mobileNav.classList.remove('open');
   }
-}
+
+  // Active nav highlight on scroll
+  const sections = document.querySelectorAll('section[id], div[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 90) current = s.id; });
+    navLinks.forEach(a => { a.style.color = a.getAttribute('href') === '#' + current ? 'var(--blue)' : ''; });
+  });
 </script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Business Process Digitization Consulting",
-  "provider": {
-    "@type": "Organization",
-    "name": "Digitize Your Process"
-  },
-  "areaServed": "Global",
-  "serviceType": "Digital Transformation & Process Digitization",
-  "description": "We digitize offline, paper-based, and Excel-driven workflows into secure, automated digital systems."
-}
-</script>
-
-
-</body></html>
+</body>
+</html>
