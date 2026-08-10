@@ -75,7 +75,21 @@
     height: 68px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.04);
   }
-  .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .logo { 
+    display: flex; 
+    align-items: center; 
+    text-decoration: none; 
+    flex-shrink: 0;
+    height: 68px;
+  }
+  .site-logo {
+    display: block;
+    width: 210px;
+    height: auto;
+    max-height: 58px;
+    object-fit: contain;
+    object-position: left center;
+  }
   .logo-icon { width: 38px; height: 38px; flex-shrink: 0; }
   .logo-text { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 16px; line-height: 1.2; color: var(--navy); }
   .logo-text span { color: var(--blue); display: block; }
@@ -339,6 +353,7 @@
   @media (max-width: 1024px) {
     .topbar { padding: 7px 24px; }
     nav { padding: 0 24px; }
+    .site-logo { width: 190px; }
     .nav-links { gap: 18px; }
     .nav-links a { font-size: 13px; }
 
@@ -361,6 +376,8 @@
     .topbar .right { display: none; }
 
     nav { padding: 0 16px; height: 60px; }
+    .logo { height: 60px; }
+    .site-logo { width: 180px; max-height: 52px; }
     .nav-links { display: none; }
     .nav-cta-desktop { display: none; }
     .hamburger { display: flex; }
@@ -417,6 +434,7 @@
   /* Small mobile: ≤ 480px */
   @media (max-width: 480px) {
     .hero h1 { font-size: 26px; }
+    .site-logo { width: 165px; max-height: 49px; }
     .hero-ctas { flex-direction: column; }
     .hero-ctas .btn-primary, .hero-ctas .btn-outline { text-align: center; }
     .btn-primary, .btn-outline { width: 100%; text-align: center; }
@@ -456,14 +474,8 @@
 </div>
 <!-- NAV -->
 <nav>
-<a class="logo" href="#">
-<svg class="logo-icon" fill="none" viewbox="0 0 38 38" xmlns="http://www.w3.org/2000/svg">
-<rect fill="#EBF1FF" height="38" rx="8" width="38"></rect>
-<path d="M9 10h8a10 10 0 010 18H9V10z" fill="#1E5CF5"></path>
-<path d="M20 14h5a6 6 0 010 12h-5V14z" fill="#3D9BE9" opacity=".7"></path>
-<circle cx="28" cy="11" fill="#00C2CB" r="3"></circle>
-</svg>
-<div class="logo-text">Digitize<span>Your Process</span></div>
+<a class="logo" href="#" aria-label="Digitize Your Process home">
+<img class="site-logo" src="Digitizeyourprocess-logo-short.png" alt="Digitize Your Process" width="210" height="59">
 </a>
 <ul class="nav-links">
 <li><a href="#hero">Home</a></li>
